@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turpotic - Buy & Sell Cars</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            TURPO<span>TIC</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="car.html">Car</a>
+            <a href="rent.html">Rent</a>
+            <a href="motorcycles.html">Motorcycles</a>
+        </nav>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+        <div class="nav-icons">
+            <button class="icon-btn search-btn" aria-label="Search">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+            <button class="icon-btn cart-btn" aria-label="Cart">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            </button>
+            <button class="icon-btn" aria-label="Profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </button>
+        </div>
+    </header>
+
+    <section class="split-hero">
+        <div class="split-left">
+            <div class="split-content-wrapper left-align">
+                <h1 class="split-title-white">Find your <br>Dream Car</h1>
+                <p class="split-desc-grey">
+                    Discover premium vehicles tailored to <br>
+                    your 
+                    lifestyle. Performance,luxury, and <br> reliability — all in one place.
+                </p>
+                <a href="#" class="btn-get-started">Get Started</a>
+            </div>
+        </div>
+
+        <div class="split-right">
+            <div class="split-content-wrapper right-align">
+                <h1 class="split-title-dark">Sell your <br><span class="blue-accent">Car</span></h1>
+            </div>
+        </div>
+
+        <div class="centered-car-wrapper">
+            <img src="13.png" alt="Blue Luxury Car Top View" class="center-car-img">
+        </div>
+    </section>
+
+    <section class="catalog-section">
+        <div class="catalog-container">
+            <div class="catalog-filter-bar">
+                <div class="main-filters">
+                    <button class="cat-btn active">ALL MODELS</button>
+                    <button class="cat-btn">ELECTRIC</button>
+                    <button class="cat-btn">GRAND TOURING</button>
+                    <button class="cat-btn">SUPER SPORT</button>
+                    <button class="cat-btn">LUXURY SUV</button>
+                </div>
+                
+                <div class="secondary-filters">
+                    <div class="dropdown-filter">
+                        <span>BRAND: ALL</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+                    </div>
+                    <div class="dropdown-filter">
+                        <span>PRICE: HIGH TO LOW</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+                    </div>
+                    <span class="results-count">SHOWING 24 RESULTS</span>
+                </div>
+            </div>
+
+            <div class="catalog-grid">
+                <div class="catalog-card">
+                    <div class="card-image-area">
+                        <img src="11.png" alt="911 Carrera S" loading="lazy">
+                        <div class="price-badge">$148,500</div>
+                    </div>
+                    <div class="card-body-content">
+                        <h3 class="car-main-name">911 CARRERA S</h3>
+                        <p class="car-sub-details">HERITAGE SILVER | 2024</p>
+                        <div class="car-tags-row">
+                            <span class="spec-tag">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                4.5s
+                            </span>
+                            <span class="spec-tag">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                503 HP
+                            </span>
+                        </div>
+                        <a href="checkout.html" class="btn-details-dark">VIEW DETAILS</a>
+                    </div>
+                </div>
+
+                <div class="catalog-card">
+                    <div class="card-image-area">
+                        <img src="12.png" alt="F8 Tributo" loading="lazy">
+                        <div class="price-badge">$276,000</div>
+                    </div>
+                    <div class="card-body-content">
+                        <h3 class="car-main-name">F8 TRIBUTO</h3>
+                        <p class="car-sub-details">HERITAGE SILVER | 2024</p>
+                        <div class="car-tags-row">
+                            <span class="spec-tag">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                4.5s
+                            </span>
+                            <span class="spec-tag">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                503 HP
+                            </span>
+                        </div>
+                        <a href="checkout.html" class="btn-details-dark">VIEW DETAILS</a>
+                    </div>
+                </div>
+
+                <div class="catalog-card">
+                    <div class="card-image-area">
+                        <img src="14.png" alt="RS E-Tron GT" loading="lazy">
+                        <div class="price-badge">$139,900</div>
+                    </div>
+                    <div class="card-body-content">
+                        <h3 class="car-main-name">RS E-TRON GT</h3>
+                        <p class="car-sub-details">HERITAGE SILVER | 2024</p>
+                        <div class="car-tags-row">
+                            <span class="spec-tag">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                4.5s
+                            </span>
+                            <span class="spec-tag">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                503 HP
+                            </span>
+                        </div>
+                        <a href="checkout.html" class="btn-details-dark">VIEW DETAILS</a>
+                    </div>
+                </div>
+
+                <div class="catalog-card">
+                    <div class="card-image-area">
+                        <img src="16.png" alt="Vantage V8" loading="lazy">
+                        <div class="price-badge">$165,500</div>
+                    </div>
+                    <div class="card-body-content">
+                        <h3 class="car-main-name">VANTAGE V8</h3>
+                        <p class="car-sub-details">HERITAGE SILVER | 2024</p>
+                        <div class="car-tags-row">
+                            <span class="spec-tag">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                4.5s
+                            </span>
+                            <span class="spec-tag">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                503 HP
+                            </span>
+                        </div>
+                        <a href="checkout.html" class="btn-details-dark">VIEW DETAILS</a>
+                    </div>
+                </div>
+
+                <div class="catalog-card">
+                    <div class="card-image-area">
+                        <img src="14.png" alt="Cayman GT4" loading="lazy">
+                        <div class="price-badge">$102,500</div>
+                    </div>
+                    <div class="card-body-content">
+                        <h3 class="car-main-name">CAYMAN GT4</h3>
+                        <p class="car-sub-details">HERITAGE SILVER | 2024</p>
+                        <div class="car-tags-row">
+                            <span class="spec-tag">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                4.5s
+                            </span>
+                            <span class="spec-tag">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                503 HP
+                            </span>
+                        </div>
+                        <a href="checkout.html" class="btn-details-dark">VIEW DETAILS</a>
+                    </div>
+                </div>
+
+                <div class="catalog-card">
+                    <div class="card-image-area">
+                        <img src="15.png" alt="Huracán ST" loading="lazy">
+                        <div class="price-badge">$104,500</div>
+                    </div>
+                    <div class="card-body-content">
+                        <h3 class="car-main-name">HURACÁN ST</h3>
+                        <p class="car-sub-details">HERITAGE SILVER | 2024</p>
+                        <div class="car-tags-row">
+                            <span class="spec-tag">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                4.5s
+                            </span>
+                            <span class="spec-tag">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                503 HP
+                            </span>
+                        </div>
+                        <a href="checkout.html" class="btn-details-dark">VIEW DETAILS</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="catalog-pagination-area">
+                <a href="#" class="btn-explore-more">
+                    EXPLORE MORE INVENTORY 
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <div class="page-indicator">PAGE 1 OF 4</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="catalog-footer">
+        <div class="footer-inside">
+            <div class="f-col brand-info">
+                <h3 class="f-logo">TURPO<span>TIC</span></h3>
+                <p class="f-desc">Redefining the automotive experience through curated excellence and technical precision.</p>
+            </div>
+
+            <div class="f-col links-group">
+                <h4>GALLERY</h4>
+                <ul>
+                    <li><a href="#">Sale</a></li>
+                    <li><a href="#">Rent</a></li>
+                    <li><a href="#">Motorcycles</a></li>
+                </ul>
+            </div>
+
+            <div class="f-col links-group">
+                <h4>SUPPORT</h4>
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of service</a></li>
+                </ul>
+            </div>
+
+            <div class="f-col copyright-area">
+                <p>© 2026 TURPOTIC GALLERY.PRECISION MOTION DEFINED.</p>
+            </div>
+        </div>
+    </footer>
+<div class="search-overlay">
+    <div class="search-box">
+        <input type="text" placeholder="Search luxury vehicles...">
+        <button class="close-search">✕</button>
+    </div>
+</div>
+<div class="cart-overlay">
+    <div class="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart">✕</button>
+        </div>
+        <div class="cart-items">
+        </div>
+        <a href="checkout.html" class="checkout-btn">
+            Go to Checkout
+        </a>
+    </div>
+</div>
+<div class="profile-panel">
+    <div class="profile-box">
+        <h3>User Profile</h3>
+        <div class="profile-info">
+            <p><strong>Name:</strong> Guest User</p>
+            <p><strong>Status:</strong> Active</p>
+        </div>
+        <ul class="profile-links">
+            <li>My Orders</li>
+            <li>Wishlist</li>
+            <li>Settings</li>
+        </ul>
+        <button class="logout-btn">Logout</button>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

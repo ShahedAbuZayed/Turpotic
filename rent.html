@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turpotic - Rent the Extraordinary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            TURPO<span>TIC</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="car.html">Car</a>
+            <a href="rent.html">Rent</a>
+            <a href="motorcycles.html">Motorcycles</a>
+        </nav>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+        <div class="nav-icons">
+            <button class="icon-btn search-btn" aria-label="Search">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+            <button class="icon-btn cart-btn" aria-label="Cart">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            </button>
+            <button class="icon-btn" aria-label="Profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </button>
+        </div>
+    </header>
+
+    <section class="rent-hero">
+        <div class="rent-container">
+            <div class="rent-left-content">
+                <span class="rent-badge fade-up">PREMIUM PERFORMANCE FLEET</span>
+                <h1 class="rent-main-title fade-up">
+                    Rent the <br><span class="blue-text">Extraordinary</span>
+                </h1>
+                <p class="rent-description fade-up">
+                    A curated gallery of automotive masterpieces. Where engineering excellence meets unparalleled aesthetic design.
+                </p>
+                <div class="rent-btn-group fade-up">
+                    <a href="#" class="btn-rent-dark">Explore Fleet</a>
+                    <a href="#" class="btn-rent-light">View Concierge</a>
+                </div>
+            </div>
+
+            <div class="rent-right-display">
+                <div class="skewed-bg-layer anim-layer-bg"></div>
+                <div class="car-main-card anim-card-main">
+                    <img src="rent.png" alt="Mercedes G-Class" class="rent-car-img" loading="eager">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--section2-->
+    <section class="rent-catalog-section">
+        <div class="rent-catalog-container">
+            
+            <div class="rent-filter-bar">
+                <div class="rent-tabs">
+                    <button class="rent-tab-btn active">ALL VEHICLES</button>
+                    <button class="rent-tab-btn">SPORT</button>
+                    <button class="rent-tab-btn">EXECUTIVE</button>
+                    <button class="rent-tab-btn">OFF-ROAD</button>
+                </div>
+                <span class="rent-results">SHOWING 24 RESULTS</span>
+            </div>
+
+            <div class="rent-cards-grid">
+                
+                <div class="rent-card scroll-reveal">
+                    <div class="rent-card-img-wrapper">
+                        <img src="11.png" alt="911 Carrera S" loading="lazy">
+                    </div>
+                    <div class="rent-card-body">
+                        <div class="rent-card-header">
+                            <div>
+                                <h3>911 CARRERA S</h3>
+                                <p class="rent-car-sub">HERITAGE SILVER | 2024</p>
+                            </div>
+                            <div class="rent-card-price">
+                                <span class="price-amount">$450</span>
+                                <span class="price-unit">PER DAY</span>
+                            </div>
+                        </div>
+                        
+                        <div class="rent-specs-table">
+                            <div class="spec-col">
+                                <span class="spec-label">WEEKLY RATE</span>
+                                <span class="spec-val">$2,800 <small>/ wk</small></span>
+                            </div>
+                            <div class="spec-col">
+                                <span class="spec-label">TRANSMISSION</span>
+                                <span class="spec-val">PDK Auto</span>
+                            </div>
+                        </div>
+
+                        <div class="rent-duration-picker">
+                            <span class="duration-title">SELECT DURATION</span>
+                            <div class="duration-options">
+                                <button class="duration-opt active">Daily</button>
+                                <button class="duration-opt">Weekly</button>
+                                <button class="duration-opt">Monthly</button>
+                            </div>
+                        </div>
+
+                        <a href="checkout.html" class="btn-rent-now">RENT NOW</a>
+                    </div>
+                </div>
+
+                <div class="rent-card scroll-reveal">
+                    <div class="rent-card-img-wrapper">
+                        <img src="14.png" alt="F8 Tributo" loading="lazy">
+                    </div>
+                    <div class="rent-card-body">
+                        <div class="rent-card-header">
+                            <div>
+                                <h3>F8 TRIBUTO</h3>
+                                <p class="rent-car-sub">HERITAGE SILVER | 2024</p>
+                            </div>
+                            <div class="rent-card-price">
+                                <span class="price-amount">$850</span>
+                                <span class="price-unit">PER DAY</span>
+                            </div>
+                        </div>
+                        
+                        <div class="rent-specs-table">
+                            <div class="spec-col">
+                                <span class="spec-label">WEEKLY RATE</span>
+                                <span class="spec-val">$2,800 <small>/ wk</small></span>
+                            </div>
+                            <div class="spec-col">
+                                <span class="spec-label">TRANSMISSION</span>
+                                <span class="spec-val">PDK Auto</span>
+                            </div>
+                        </div>
+
+                        <div class="rent-duration-picker">
+                            <span class="duration-title">SELECT DURATION</span>
+                            <div class="duration-options">
+                                <button class="duration-opt active">Daily</button>
+                                <button class="duration-opt">Weekly</button>
+                                <button class="duration-opt">Monthly</button>
+                            </div>
+                        </div>
+
+                        <a href="checkout.html" class="btn-rent-now">RENT NOW</a>
+                    </div>
+                </div>
+
+                <div class="rent-card scroll-reveal">
+                    <div class="rent-card-img-wrapper">
+                        <img src="15.png" alt="Vantage V8" loading="lazy">
+                    </div>
+                    <div class="rent-card-body">
+                        <div class="rent-card-header">
+                            <div>
+                                <h3>VANTAGE V8</h3>
+                                <p class="rent-car-sub">HERITAGE SILVER | 2024</p>
+                            </div>
+                            <div class="rent-card-price">
+                                <span class="price-amount">$750</span>
+                                <span class="price-unit">PER DAY</span>
+                            </div>
+                        </div>
+                        
+                        <div class="rent-specs-table">
+                            <div class="spec-col">
+                                <span class="spec-label">WEEKLY RATE</span>
+                                <span class="spec-val">$2,800 <small>/ wk</small></span>
+                            </div>
+                            <div class="spec-col">
+                                <span class="spec-label">TRANSMISSION</span>
+                                <span class="spec-val">PDK Auto</span>
+                            </div>
+                        </div>
+
+                        <div class="rent-duration-picker">
+                            <span class="duration-title">SELECT DURATION</span>
+                            <div class="duration-options">
+                                <button class="duration-opt active">Daily</button>
+                                <button class="duration-opt">Weekly</button>
+                                <button class="duration-opt">Monthly</button>
+                            </div>
+                        </div>
+
+                        <a href="checkout.html" class="btn-rent-now">RENT NOW</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="why-rent-box scroll-reveal">
+                
+                <div class="why-rent-cards">
+                    <div class="feature-mini-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4d77ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </div>
+                        <h4>Full Coverage</h4>
+                        <p>Comprehensive premium insurance included with every high-end rental.</p>
+                    </div>
+
+                    <div class="feature-mini-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4d77ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                        </div>
+                        <h4>Concierge Delivery</h4>
+                        <p>We deliver your vehicle to your doorstep or airport terminal.</p>
+                    </div>
+                </div>
+                
+                <div class="why-rent-content">
+                    <h2>WHY RENT FROM THE GALLERY?</h2>
+                    <p>Our vehicles are more than machines—they are curated experiences. Each rental undergoes a 120-point precision check to ensure absolute performance and aesthetic perfection.</p>
+                    <a href="#" class="why-rent-link">LEARN ABOUT OUR STANDARDS</a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="catalog-footer">
+        <div class="footer-inside">
+            <div class="f-col brand-info">
+                <h3 class="f-logo">TURPO<span>TIC</span></h3>
+                <p class="f-desc">Redefining the automotive experience through curated excellence and technical precision.</p>
+            </div>
+
+            <div class="f-col links-group">
+                <h4>GALLERY</h4>
+                <ul>
+                    <li><a href="#">Sale</a></li>
+                    <li><a href="#">Rent</a></li>
+                    <li><a href="#">Motorcycles</a></li>
+                </ul>
+            </div>
+
+            <div class="f-col links-group">
+                <h4>SUPPORT</h4>
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of service</a></li>
+                </ul>
+            </div>
+
+            <div class="f-col copyright-area">
+                <p>© 2026 TURPOTIC GALLERY.PRECISION MOTION DEFINED.</p>
+            </div>
+        </div>
+    </footer>
+    <div class="search-overlay">
+    <div class="search-box">
+        <input type="text" placeholder="Search luxury vehicles...">
+        <button class="close-search">✕</button>
+    </div>
+</div>
+<div class="cart-overlay">
+    <div class="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart">✕</button>
+        </div>
+        <div class="cart-items">
+        </div>
+        <a href="checkout.html" class="checkout-btn">
+            Go to Checkout
+        </a>
+    </div>
+</div>
+<div class="profile-panel">
+    <div class="profile-box">
+        <h3>User Profile</h3>
+        <div class="profile-info">
+            <p><strong>Name:</strong> Guest User</p>
+            <p><strong>Status:</strong> Active</p>
+        </div>
+        <ul class="profile-links">
+            <li>My Orders</li>
+            <li>Wishlist</li>
+            <li>Settings</li>
+        </ul>
+        <button class="logout-btn">Logout</button>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
