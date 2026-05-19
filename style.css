@@ -1311,7 +1311,42 @@ body {
     height: 550px;
 }
 
+@media (max-width: 992px) {
 
+    .rent-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 60px;
+    }
+
+    .rent-left-content {
+        max-width: 100%;
+    }
+
+    .rent-description {
+        max-width: 100%;
+        margin: 0 auto 35px;
+    }
+
+    .rent-btn-group {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .rent-main-title {
+        font-size: 48px;
+    }
+
+    .rent-right-display {
+        width: 100%;
+        height: 450px;
+    }
+
+    .car-main-card {
+        width: 100%;
+        height: 100%;
+    }
+        }
 .skewed-bg-layer {
     position: absolute;
     width: 100%;
