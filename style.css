@@ -1235,7 +1235,129 @@ html {
 }
 
 
+/* =========================
+   HERO TEXT ANIMATION
+========================= */
 
+.split-left .split-content-wrapper {
+    animation: fadeLeft 1s ease;
+}
+
+.split-right .split-content-wrapper {
+    animation: fadeRight 1s ease;
+}
+
+/* =========================
+   CARDS ANIMATION
+========================= */
+
+.catalog-card {
+    opacity: 0;
+    animation: fadeCard 0.8s ease forwards;
+}
+
+/* Delay للكروت */
+
+.catalog-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.catalog-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.catalog-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.catalog-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.catalog-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.catalog-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+/* Hover ناعم */
+
+.catalog-card:hover {
+    transform: translateY(-8px);
+}
+
+.catalog-card:hover .card-image-area img {
+    transform: scale(1.04);
+}
+
+/* =========================
+   BUTTON HOVER
+========================= */
+
+.btn-get-started:hover,
+.btn-explore-more:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================
+   KEYFRAMES
+========================= */
+
+@keyframes fadeLeft {
+
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeCard {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .catalog-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .catalog-card:hover .card-image-area img {
+        transform: scale(1.02);
+    }
+}
 
 /* ===PAGE 3 Rent=== */
 .rent-hero {
