@@ -1467,7 +1467,83 @@ html {
     align-items: center;
     height: 550px;
 }
+/* =========================
+   HERO TEXT ANIMATION (FAST & SAFE)
+========================= */
 
+.rent-badge,
+.rent-main-title,
+.rent-description,
+.rent-btn-group {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: fadeUpSoft 0.7s ease forwards;
+    will-change: transform, opacity;
+}
+
+/* تأخير بسيط لكل عنصر */
+.rent-badge { animation-delay: 0.1s; }
+.rent-main-title { animation-delay: 0.2s; }
+.rent-description { animation-delay: 0.3s; }
+.rent-btn-group { animation-delay: 0.4s; }
+
+/* =========================
+   RIGHT CAR ANIMATION (NO LAYOUT CHANGE)
+========================= */
+
+.car-main-card {
+    animation: cardFloat 4s ease-in-out infinite;
+    will-change: transform;
+}
+
+/* الصورة فقط Hover */
+.car-main-card:hover .rent-car-img {
+    transform: scale(1.04);
+}
+
+/* =========================
+   SCROLL REVEAL (LIGHTWEIGHT)
+========================= */
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    will-change: transform, opacity;
+}
+
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   KEYFRAMES (GPU FRIENDLY)
+========================= */
+
+@keyframes fadeUpSoft {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* حركة خفيفة جداً بدون تأثير على الشكل */
+@keyframes cardFloat {
+    0% {
+        transform: rotate(2deg) translateY(0);
+    }
+    50% {
+        transform: rotate(2deg) translateY(-8px);
+    }
+    100% {
+        transform: rotate(2deg) translateY(0);
+    }
+}
 @media (max-width: 992px) {
 
     .rent-container {
