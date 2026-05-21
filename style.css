@@ -2121,10 +2121,19 @@ html {
 }
 
 .animate-bike-slide {
-    opacity: 0;
-    animation: bikeSlideIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0.2s forwards;
+    opacity: 1; /* مهم جدًا */
+    animation: bikeFloatIn 0.8s ease forwards;
 }
-
+@keyframes bikeFloatIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -45%) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -40%) scale(1);
+    }
+    }
 @keyframes motoFade {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -2138,6 +2147,87 @@ html {
     to {
         opacity: 1;
         transform: translate(-50%, -40%) scale(1);
+    }
+}
+/* =========================
+   HERO TEXT ANIMATION
+========================= */
+
+.moto-left-pane,
+.moto-right-pane {
+    animation: fadeSide 0.8s ease forwards;
+    opacity: 0;
+}
+
+.moto-right-pane {
+    animation-delay: 0.15s;
+}
+
+/* النص */
+.moto-main-title,
+.moto-secondary-title,
+.moto-desc,
+.btn-moto-started {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: textUp 0.7s ease forwards;
+}
+
+.moto-main-title { animation-delay: 0.2s; }
+.moto-desc { animation-delay: 0.3s; }
+.btn-moto-started { animation-delay: 0.4s; }
+.moto-secondary-title { animation-delay: 0.25s; }
+
+/* =========================
+   MOTORCYCLE SAFE ANIMATION
+   (بدون تغيير مكانها)
+========================= */
+
+.centered-moto-container {
+    animation: bikeFloat 4s ease-in-out infinite;
+}
+
+/* الصورة نفسها hover فقط */
+.main-bike-img {
+    transition: transform 0.4s ease;
+}
+
+.centered-moto-container:hover .main-bike-img {
+    transform: scale(1.03);
+}
+
+/* =========================
+   KEYFRAMES
+========================= */
+
+@keyframes fadeSide {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes textUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* حركة آمنة بدون لمس translate(-50%) */
+@keyframes bikeFloat {
+    0% {
+        transform: translate(-50%, -40%);
+    }
+    50% {
+        transform: translate(-50%, -43%);
+    }
+    100% {
+        transform: translate(-50%, -40%);
     }
 }
 /* ==section 2 in motorcycle== */
