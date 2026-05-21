@@ -3055,6 +3055,195 @@ html {
 .btn-modal-home:hover {
     background-color: #4d77ff;
 }
+/* =========================
+   PAGE LOAD ENTRANCE
+========================= */
+
+.checkout-left,
+.checkout-right {
+    opacity: 0;
+    transform: translateY(25px);
+    animation: checkoutEnter 0.7s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* stagger */
+.checkout-left { animation-delay: 0.1s; }
+.checkout-right { animation-delay: 0.25s; }
+
+/* =========================
+   TITLE ANIMATION
+========================= */
+
+.checkout-title,
+.checkout-subtitle {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeDown 0.6s ease forwards;
+}
+
+.checkout-title { animation-delay: 0.2s; }
+.checkout-subtitle { animation-delay: 0.1s; }
+
+/* =========================
+   FORM FIELDS MICRO INTERACTION
+========================= */
+
+.form-group {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fieldIn 0.5s ease forwards;
+}
+
+/* stagger form */
+.form-group:nth-child(1) { animation-delay: 0.2s; }
+.form-group:nth-child(2) { animation-delay: 0.3s; }
+.form-group:nth-child(3) { animation-delay: 0.4s; }
+.form-group:nth-child(4) { animation-delay: 0.5s; }
+
+.form-group input {
+    transition: all 0.25s ease;
+}
+
+.form-group input:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(77, 119, 255, 0.12);
+}
+
+/* =========================
+   SECURE BADGE FLOAT
+========================= */
+
+.secure-badge-box {
+    animation: softFloat 3s ease-in-out infinite;
+}
+
+/* =========================
+   INVOICE CARD ENTER
+========================= */
+
+.invoice-summary-card {
+    opacity: 0;
+    transform: translateX(30px) scale(0.98);
+    animation: invoiceIn 0.8s ease forwards;
+    animation-delay: 0.25s;
+}
+
+/* image hover */
+.invoice-hero-img img {
+    transition: transform 0.4s ease;
+}
+
+.invoice-summary-card:hover .invoice-hero-img img {
+    transform: scale(1.05);
+}
+
+/* =========================
+   BUTTON PREMIUM EFFECT
+========================= */
+
+.btn-pay-now {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.btn-pay-now:hover {
+    transform: translateY(-2px);
+}
+
+.btn-pay-now::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.15);
+    transition: 0.5s ease;
+}
+
+.btn-pay-now:hover::after {
+    left: 100%;
+}
+
+/* =========================
+   SUCCESS MODAL ANIMATION
+========================= */
+
+.success-modal-card {
+    transform: scale(0.8);
+    opacity: 0;
+    animation: modalPop 0.5s ease forwards;
+}
+
+.success-modal-overlay {
+    transition: opacity 0.3s ease;
+}
+
+/* =========================
+   KEYFRAMES
+========================= */
+
+@keyframes checkoutEnter {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fieldIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes softFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes invoiceIn {
+    from {
+        opacity: 0;
+        transform: translateX(30px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes modalPop {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
 @keyframes pulseGlow {
     0% { box-shadow: 0 0 0 0 rgba(77, 119, 255, 0.4); }
