@@ -858,6 +858,41 @@ body {
     color: white;
     cursor: pointer;
 }
+html {
+    scroll-behavior: smooth;
+}
+
+.path-card,
+.main-gallery-card,
+.mini-card,
+.btn {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        background 0.4s ease;
+    will-change: transform;
+}
+
+.path-card:hover,
+.main-gallery-card:hover,
+.mini-card:hover {
+    box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+}
+
+.search-overlay,
+.cart-overlay,
+.profile-panel {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.35s ease;
+}
+
+.search-overlay.active,
+.cart-overlay.active,
+.profile-panel.active {
+    opacity: 1;
+    visibility: visible;
+}
 /*== CAR PAGE 2 == */
 /*section 1 in car*/
 .split-hero {
@@ -893,7 +928,7 @@ body {
     position: relative;
 } 
 
- */
+ 
 .split-content-wrapper {
     max-width: 460px;
     z-index: 5;
