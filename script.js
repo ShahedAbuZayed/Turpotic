@@ -1,4 +1,211 @@
+document.addEventListener("DOMContentLoaded", () => {
 
+    /* =========================
+       MOBILE MENU
+    ========================== */
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('open');
+        });
+    }
+
+    /* =========================
+       SCROLL REVEAL ANIMATION
+       خفيف وسريع باستخدام IntersectionObserver
+    ========================== */
+
+    const revealItems = document.querySelectorAll(`
+        .hero-content,
+        .path-card,
+        .main-gallery-card,
+        .mini-card,
+        .section-header,
+        .gallery-main-title,
+        .f-col
+    `);
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    revealItems.forEach((item) => {
+        item.classList.add('reveal-element');
+        revealObserver.observe(item);
+    });
+
+    /* =========================
+       PARALLAX HERO
+       ناعم وخفيف جداً
+    ========================== */
+
+    const hero = document.querySelector('.hero-section');
+
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+
+        if (hero && scrollY < 700) {
+            hero.style.backgroundPositionY = `${scrollY * 0.4}px`;
+        }
+    });
+
+    /* =========================
+       BUTTON MAGNET EFFECT
+       بدون لاج
+    ========================== */
+
+    const buttons = document.querySelectorAll('.btn');
+
+    buttons.forEach((btn) => {
+
+        btn.addEventListener('mousemove', (e) => {
+
+            const rect = btn.getBoundingClientRect();
+
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+
+            btn.style.transform = `
+                translate(${x * 0.12}px, ${y * 0.12}px)
+            `;
+        });
+
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = 'translate(0px,0px)';
+        });
+
+    });
+
+    /* =========================
+       CARDS HOVER 3D EFFECT
+    ========================== */
+
+    const cards = document.querySelectorAll(`
+        .path-card,
+        .main-gallery-card,
+        .mini-card
+    `);
+
+    cards.forEach((card) => {
+
+        card.addEventListener('mousemove', (e) => {
+
+            const rect = card.getBoundingClientRect();
+
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const rotateY = ((x / rect.width) - 0.5) * 10;
+            const rotateX = ((y / rect.height) - 0.5) * -10;
+
+            card.style.transform = `
+                perspective(1000px)
+                rotateX(${rotateX}deg)
+                rotateY(${rotateY}deg)
+                scale(1.02)
+            `;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = `
+                perspective(1000px)
+                rotateX(0deg)
+                rotateY(0deg)
+                scale(1)
+            `;
+        });
+
+    });
+
+    /* =========================
+       SEARCH OVERLAY
+    ========================== */
+
+    const searchBtn = document.querySelector('.search-btn');
+    const searchOverlay = document.querySelector('.search-overlay');
+    const closeSearch = document.querySelector('.close-search');
+
+    if (searchBtn && searchOverlay && closeSearch) {
+
+        searchBtn.addEventListener('click', () => {
+            searchOverlay.classList.add('active');
+        });
+
+        closeSearch.addEventListener('click', () => {
+            searchOverlay.classList.remove('active');
+        });
+
+    }
+
+    /* =========================
+       CART DRAWER
+    ========================== */
+
+    const cartBtn = document.querySelector('.cart-btn');
+    const cartOverlay = document.querySelector('.cart-overlay');
+    const closeCart = document.querySelector('.close-cart');
+
+    if (cartBtn && cartOverlay && closeCart) {
+
+        cartBtn.addEventListener('click', () => {
+            cartOverlay.classList.add('active');
+        });
+
+        closeCart.addEventListener('click', () => {
+            cartOverlay.classList.remove('active');
+        });
+
+    }
+
+    /* =========================
+       PROFILE PANEL
+    ========================== */
+
+    const profileBtn = document.querySelectorAll('.icon-btn')[2];
+    const profilePanel = document.querySelector('.profile-panel');
+
+    if (profileBtn && profilePanel) {
+
+        profileBtn.addEventListener('click', () => {
+            profilePanel.classList.toggle('active');
+        });
+
+    }
+
+    /* =========================
+       FLOATING ANIMATION
+    ========================== */
+
+    const floatingCard = document.querySelector('.main-gallery-card');
+
+    if (floatingCard) {
+
+        let floatY = 0;
+        let direction = 1;
+
+        setInterval(() => {
+
+            floatY += direction * 0.4;
+
+            if (floatY > 8 || floatY < -8) {
+                direction *= -1;
+            }
+
+            floatingCard.style.translate = `0 ${floatY}px`;
+
+        }, 30);
+    }
+
+});
 document.addEventListener("DOMContentLoaded", () => {
 // 1. كود تشغيل تفعيل وإغلاق قائمة الموبايل (Menu Toggle)
 const menuToggle = document.querySelector('.menu-toggle');
