@@ -343,3 +343,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+const revealElements = document.querySelectorAll('.reveal-element');
+
+const revealObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+            entry.target.classList.add('revealed');
+        }
+
+    });
+
+}, {
+    threshold: 0.15
+});
+
+revealElements.forEach(el => {
+    revealObserver.observe(el);
+});
+
+const cards = document.querySelectorAll('.catalog-card');
+
+const cardsObserver = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+
+    });
+
+},{
+    threshold:0.15
+});
+
+cards.forEach(card=>{
+    cardsObserver.observe(card);
+});
